@@ -6,12 +6,16 @@
 body {
   margin: 0;
   display: flex;
-  min-height: 30vh;
+  min-height: 100vh; 
+  justify-content: center; 
+  align-items: flex-start; 
   background-color: #242424;
   color: white;
+  padding: 20px; 
 }
 
 h1 {
   font-size: 60px;
+  text-align: center; 
 }
 

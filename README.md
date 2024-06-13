@@ -1,8 +1,9 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Hola Profe! 
 
-Currently, two official plugins are available:
+El objetivo del proyecto es realizar un e-commerce de ropa deportiva. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Posteriormente agregaré más información acerca de los elementos que se vayan sumando. 
+
+¡Saludos!
