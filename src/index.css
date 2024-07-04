@@ -1,21 +1,7 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  min-height: 100vh; 
-  justify-content: center; 
-  align-items: flex-start; 
-  background-color: #242424;
+  padding: 0;
+  box-sizing: border-box;
   color: white;
-  padding: 20px; 
-}
-
-h1 {
-  font-size: 60px;
-  text-align: center; 
 }
 
