@@ -11,7 +11,7 @@ const useFetch = (endpoint) => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setData(data.results); 
+        setData(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -20,7 +20,7 @@ const useFetch = (endpoint) => {
     fetchData();
   }, [endpoint]);
 
-  return { data : data }; 
+  return { data };
 };
 
 export default useFetch;

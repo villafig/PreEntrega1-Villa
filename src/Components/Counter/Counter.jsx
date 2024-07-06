@@ -1,12 +1,13 @@
-function Counter({sumar,contador,restar}) {
+
+
+const Counter = ({ contador, sumar, restar }) => {
   return (
-  <>
-    <button onClick={sumar}>Sumar</button>
-    <h2>Número de productos en tu carrito {contador}</h2>
-    <button onClick={restar}>Restar</button>
-    </>
-  )
-}
+    <div>
+      <button onClick={sumar}>Sumar</button>
+      <p style={{color:"black"}}>Contador: {contador}</p>
+      <button onClick={restar}>Restar</button>
+    </div>
+  );
+};
 
-
-export default Counter
+export default Counter;

@@ -1,36 +1,43 @@
-import React from 'react';
 import { Grid, Card, CardActionArea, CardMedia, CardContent, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
+
 
 const CardContainer = ({ productos }) => {
   return (
     <Grid container justifyContent="center" spacing={4}>
       {productos.map((producto) => (
-        <Grid item xs={6} md={3} sm={3} lg={3} key={producto.id}>
+        <Grid item xs={6} sm={6} md={3}lg={3} key={producto.id}>
           <Card>
+          <Link to={`/ItemDetailContainer/${producto.id}`}>
             <CardActionArea>
-              <Link to={`/ItemDetailContainer/${producto.id}`}>
                 <CardMedia
                   component="img"
                   height="200"
                   image={producto.image}
                   alt={producto.title}
-                  id={producto.id}
+                  id = {producto.id}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" style={{ color: "black" }}>
+                <Typography gutterBottom component="div" color={'black'}>
                     {producto.title}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {producto.location ? producto.location.name : 'Ubicación desconocida'}
+                  <Typography gutterBottom component="div" color={'black'}>
+                  <h4 style={{ color: 'black' }}>Price</h4>
+                  </Typography>
+                  <Typography gutterBottom component="div" color={'black'}>
+                  <h4 style={{ color: 'black' }}>$</h4>
+                  </Typography>
+                  <Typography gutterBottom component="div" color={'black'}>
+                    {producto.price}
                   </Typography>
                 </CardContent>
-              </Link>
             </CardActionArea>
+            </Link>
           </Card>
         </Grid>
       ))}
     </Grid>
+    
   );
 };
 

@@ -1,16 +1,42 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
-import useFetchItem from '../../hooks/useFetchItem'; // Asume que has importado el hook
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
-  const { id } = useParams(); // Obtén el ID de los parámetros de la URL
-  const item = useFetchItem('https://rickandmortyapi.com/api/character', id); // Obtén los detalles del producto usando el hook useFetchItem
+  const { id } = useParams();
+  const [product, setProduct] = useState({});
 
-  return <ItemDetail item={item} />;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch product');
+        }
+        const data = await response.json();
+        setProduct(data); 
+      } catch (error) {
+        console.error('Error fetching product:', error);
+      }
+    };
+
+    fetchData();
+  }, [id]);
+
+  return (
+    <div>
+      {<ItemDetail producto={product} />}
+    </div>
+  );
 };
 
 export default ItemDetailContainer;
+
+
+ 
+
+
+
 
 
 

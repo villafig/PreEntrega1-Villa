@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Counter from "./Counter";
 
 const CounterContainer = () => {
@@ -17,9 +17,9 @@ const CounterContainer = () => {
     };
 
     return (
-        <div>
+        
             <Counter contador={contador} sumar={sumar} restar={restar} />
-        </div>
+
     );
 };
 
