@@ -18,10 +18,10 @@ const CardContainer = ({ productos }) => {
                   id = {producto.id}
                 />
                 <CardContent>
-                <Typography gutterBottom component="div" color={'black'}>
+                <Typography gutterBottom component="div" color={'primary'}>
                     {producto.title}
                   </Typography>
-                  <Typography gutterBottom component="div" color={'black'}>
+                  <Typography gutterBottom component="div" color={'secondary'}>
                   <h4 style={{ color: 'black' }}>Price</h4>
                   </Typography>
                   <Typography gutterBottom component="div" color={'black'}>

@@ -1,3 +1,5 @@
+import { ThemeProvider } from '@mui/material/styles';
+import themeConfig from './themeConfig.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemListContainer from './Pages/ItemListContainer/ItemListContainer.jsx';
 import ItemDetailContainer from './Pages/ItemDetail/ItemDetailContainer.jsx';
@@ -7,16 +9,18 @@ import CategoryContainer from './Pages/CategoryContainer/CategoryContainer.jsx';
 
 function App() {
   return (
+    <ThemeProvider theme={themeConfig}>
     <BrowserRouter>
       <NavbarContainer /> 
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/ItemDetailContainer/:id" element={<ItemDetailContainer />} />
         <Route path="/Category/:category" element={<CategoryContainer />} />
-        <Route path="/cart" element={<CartDetailContainer />} />
+        <Route path="/Cart" element={<CartDetailContainer />} />
         <Route path="/*" element={<h4>Element not found</h4>} />
       </Routes>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

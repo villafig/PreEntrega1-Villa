@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
-import { stylesNavBar } from '../../Components/Navbar/NavBarStyles.js';
+import { stylesNavBar, stylesNavBartext } from '../../Components/Navbar/NavBarStyles.js';
 import {Link} from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 
@@ -22,24 +22,24 @@ const Navbar = () => {
         </Grid>
         <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
           <Link to={`/Category/electronics`}>
-            <Typography sx={stylesNavBar}>Electronics</Typography>
+            <Typography sx={stylesNavBartext}>Electronics</Typography>
           </Link>
         </Grid>
         <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
           <Link to={`/Category/jewelery`}>
-            <Typography sx={stylesNavBar}>Jewelery</Typography>
+            <Typography sx={stylesNavBartext}>Jewelery</Typography>
           </Link>
         </Grid>
 
         <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
           <Link to={`/Category/women's clothing`}>
-            <Typography sx={stylesNavBar}>Women's clothing</Typography>
+            <Typography sx={stylesNavBartext}>Women's clothing</Typography>
           </Link>
         </Grid>
 
         <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
           <Link to={`/Category/men's clothing`}>
-            <Typography sx={stylesNavBar}>Men's clothing</Typography>
+            <Typography sx={stylesNavBartext}>Men's clothing</Typography>
           </Link>
         </Grid>
 

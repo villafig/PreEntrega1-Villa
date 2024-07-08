@@ -1,8 +1,8 @@
-import React from 'react'
-
 const CartDetailContainer = () => {
   return (
-    <div>CartDetailContainer</div>
+    <>  
+      <h2 style={{color:'black'}}>Esto es la sección del carrito</h2>
+    </>
   )
 }
 
