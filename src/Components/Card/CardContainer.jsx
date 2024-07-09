@@ -1,47 +1,50 @@
 import { Grid, Card, CardActionArea, CardMedia, CardContent, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-
+import { CardStyles, CardStyle, ImageStyle, PriceStyle } from './CardStyle';
+import { useTheme } from '@mui/material/styles';
 
 const CardContainer = ({ productos }) => {
+  const theme = useTheme(); 
+
   return (
-    <Grid container justifyContent="center" spacing={4}>
+    <Grid container justifyContent="center" spacing={4} sx={CardStyles}>
       {productos.map((producto) => (
-        <Grid item xs={6} sm={6} md={3}lg={3} key={producto.id}>
-          <Card>
-          <Link to={`/ItemDetailContainer/${producto.id}`}>
-            <CardActionArea>
+        <Grid item xs={6} sm={6} md={3} lg={3} key={producto.id}>
+          <Card sx={CardStyle}>
+            <Link to={`/ItemDetailContainer/${producto.id}`}>
+              <CardActionArea>
                 <CardMedia
+                  sx={ImageStyle}
                   component="img"
-                  height="200"
                   image={producto.image}
                   alt={producto.title}
-                  id = {producto.id}
+                  id={producto.id}
                 />
                 <CardContent>
-                <Typography gutterBottom component="div" color={'primary'}>
+                  <Typography gutterBottom component="div" color="primary">
                     {producto.title}
                   </Typography>
-                  <Typography gutterBottom component="div" color={'secondary'}>
-                  <h4 style={{ color: 'black' }}>Price</h4>
+                  <Typography gutterBottom component="div">
+                    <h4 style={ PriceStyle }>Price</h4>
                   </Typography>
-                  <Typography gutterBottom component="div" color={'black'}>
-                  <h4 style={{ color: 'black' }}>$</h4>
+                  <Typography gutterBottom component="div">
+                    <h4 style={ PriceStyle }>$</h4>
                   </Typography>
-                  <Typography gutterBottom component="div" color={'black'}>
+                  <Typography gutterBottom component="div" style={ PriceStyle }>
                     {producto.price}
                   </Typography>
                 </CardContent>
-            </CardActionArea>
+              </CardActionArea>
             </Link>
           </Card>
         </Grid>
       ))}
     </Grid>
-    
   );
 };
 
 export default CardContainer;
+
 
 
 

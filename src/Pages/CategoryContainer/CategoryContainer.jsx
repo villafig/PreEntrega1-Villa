@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Category from './Category';
+import CategoryContainerStyle from './CategoryContainer';
+
 
 const CategoryContainer = () => {
   const { category } = useParams();
@@ -26,7 +28,7 @@ const CategoryContainer = () => {
   }, [category]);
 
   return (
-    <div>
+    <div style={CategoryContainerStyle}>
       <Category productos={products} />
     </div>
   );

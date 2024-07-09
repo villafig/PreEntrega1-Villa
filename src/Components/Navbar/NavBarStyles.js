@@ -4,16 +4,18 @@ export let stylesNavBar = {
   alignItems: 'center',
   textAlign: 'center',
   padding: {
-    xs: "10px",
+    xs: "20px",
     md: "10px",
     lg: "30px",
 
   },
   backgroundColor: 'black',
   width: '100%',
-  marginBottom: '40px',
+  marginBottom: '30px',
   paddingBottom: '60px',
 };
+
+
 
 export let stylesNavBartext = {
   display: 'flex',
