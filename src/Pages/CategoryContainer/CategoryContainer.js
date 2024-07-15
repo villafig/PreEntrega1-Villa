@@ -1,6 +1,9 @@
-const CategoryContainerStyle = {
+const categoryContainerStyle = {
     backgroundColor: "#C4D6E8",
-    margin: "0px",
+    padding: "40px",
+    paddingTop: "0px",
+    minHeight: "100vh",
 };
 
-export default CategoryContainerStyle;
+export default categoryContainerStyle;
+  

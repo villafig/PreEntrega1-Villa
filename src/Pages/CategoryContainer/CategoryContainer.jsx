@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Category from './Category';
-import CategoryContainerStyle from './CategoryContainer';
 
 
 const CategoryContainer = () => {
@@ -27,8 +26,7 @@ const CategoryContainer = () => {
     fetchData();
   }, [category]);
 
-  return (
-    <div style={CategoryContainerStyle}>
+  return ( <div>
       <Category productos={products} />
     </div>
   );

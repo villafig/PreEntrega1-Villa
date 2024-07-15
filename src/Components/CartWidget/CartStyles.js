@@ -1,12 +1,16 @@
 const CartStyles = {
     height: "40px",
-    width: "80px",
-    margin:"0",
+    width: "40px",
+    backgroundColor: "black",
 };
 
 const NumberStyle = {
-    height: "60px",
-    marginTop: "20px",
+    marginTop: {
+        xs: "30px", 
+        sm: "5px"},
+    width: "40px",
+    backgroundColor: "black",
 };
+
 
 export { CartStyles, NumberStyle };

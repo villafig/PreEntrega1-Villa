@@ -1,10 +1,9 @@
 import { Grid, Card, CardActionArea, CardMedia, CardContent, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { CardStyles, CardStyle, ImageStyle, PriceStyle } from './CardStyle';
-import { useTheme } from '@mui/material/styles';
 
 const CardContainer = ({ productos }) => {
-  const theme = useTheme(); 
+
 
   return (
     <Grid container justifyContent="center" spacing={4} sx={CardStyles}>

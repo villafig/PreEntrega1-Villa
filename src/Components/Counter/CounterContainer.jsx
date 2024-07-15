@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 import Counter from "./Counter";
 
-const CounterContainer = () => {
+const CounterContainer = ({onAdd}) => {
     const [contador, setContador] = useState(0);
 
     const sumar = () => {
@@ -9,7 +9,7 @@ const CounterContainer = () => {
     };
 
     const restar = () => {
-        if (contador > 0) {
+        if (contador > 1) {
             setContador(contador - 1);
         } else {
             alert("Mínimo");
@@ -17,13 +17,12 @@ const CounterContainer = () => {
     };
 
     return (
-        
-            <Counter contador={contador} sumar={sumar} restar={restar} />
-
+        <Counter contador={contador} sumar={sumar} restar={restar} onAdd={onAdd} />
     );
 };
 
 export default CounterContainer;
+
 
 
 

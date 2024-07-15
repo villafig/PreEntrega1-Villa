@@ -2,6 +2,9 @@ import { createTheme } from '@mui/material/styles';
 
 const themeConfig = createTheme({
   palette: {
+    background: {
+      default: '#C4D6E8',
+    },
     primary: {
       main: '#5BAEDE',  
     },
@@ -10,7 +13,6 @@ const themeConfig = createTheme({
     },
   },
   typography: {
-    
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
       fontSize: '2.5rem',
@@ -24,7 +26,9 @@ const themeConfig = createTheme({
       fontSize: '1rem',
     },
   },
-  spacing: 8,  
+  spacing: 8,
 });
 
 export default themeConfig;
+
+

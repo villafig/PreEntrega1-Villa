@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div>
       <Grid container sx={stylesNavBar} justifyContent="center" alignItems="center">
-        <Grid item xs={6} sm={6} md={2} lg={2} xl={2}>
+        <Grid item xs={12} sm={12} md={2} lg={2} xl={2}>
           <Link to="/">
             <img
               className="imagen_gorilla"
